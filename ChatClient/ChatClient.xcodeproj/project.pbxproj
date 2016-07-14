@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF3A3F0C1D377E6D00919934 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3A3F0B1D377E6D00919934 /* main.m */; };
+		EF3A3F0F1D377E6D00919934 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3A3F0E1D377E6D00919934 /* AppDelegate.m */; };
+		EF3A3F121D377E6D00919934 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3A3F111D377E6D00919934 /* ViewController.m */; };
+		EF3A3F151D377E6D00919934 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3A3F131D377E6D00919934 /* Main.storyboard */; };
+		EF3A3F171D377E6D00919934 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF3A3F161D377E6D00919934 /* Assets.xcassets */; };
+		EF3A3F1A1D377E6D00919934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3A3F181D377E6D00919934 /* LaunchScreen.storyboard */; };
+		EF3A3F251D377E6D00919934 /* ChatClientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3A3F241D377E6D00919934 /* ChatClientTests.m */; };
+		EF3A3F301D377E6D00919934 /* ChatClientUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3A3F2F1D377E6D00919934 /* ChatClientUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF3A3F211D377E6D00919934 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF3A3EFF1D377E6D00919934 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF3A3F061D377E6D00919934;
+			remoteInfo = ChatClient;
+		};
+		EF3A3F2C1D377E6D00919934 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF3A3EFF1D377E6D00919934 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF3A3F061D377E6D00919934;
+			remoteInfo = ChatClient;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF3A3F071D377E6D00919934 /* ChatClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3A3F0B1D377E6D00919934 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF3A3F0D1D377E6D00919934 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF3A3F0E1D377E6D00919934 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF3A3F101D377E6D00919934 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EF3A3F111D377E6D00919934 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EF3A3F141D377E6D00919934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF3A3F161D377E6D00919934 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF3A3F191D377E6D00919934 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF3A3F1B1D377E6D00919934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF3A3F201D377E6D00919934 /* ChatClientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatClientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3A3F241D377E6D00919934 /* ChatClientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatClientTests.m; sourceTree = "<group>"; };
+		EF3A3F261D377E6D00919934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF3A3F2B1D377E6D00919934 /* ChatClientUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatClientUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3A3F2F1D377E6D00919934 /* ChatClientUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatClientUITests.m; sourceTree = "<group>"; };
+		EF3A3F311D377E6D00919934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF3A3F041D377E6D00919934 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF3A3F1D1D377E6D00919934 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF3A3F281D377E6D00919934 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF3A3EFE1D377E6D00919934 = {
+			isa = PBXGroup;
+			children = (
+				EF3A3F091D377E6D00919934 /* ChatClient */,
+				EF3A3F231D377E6D00919934 /* ChatClientTests */,
+				EF3A3F2E1D377E6D00919934 /* ChatClientUITests */,
+				EF3A3F081D377E6D00919934 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF3A3F081D377E6D00919934 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF3A3F071D377E6D00919934 /* ChatClient.app */,
+				EF3A3F201D377E6D00919934 /* ChatClientTests.xctest */,
+				EF3A3F2B1D377E6D00919934 /* ChatClientUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF3A3F091D377E6D00919934 /* ChatClient */ = {
+			isa = PBXGroup;
+			children = (
+				EF3A3F0D1D377E6D00919934 /* AppDelegate.h */,
+				EF3A3F0E1D377E6D00919934 /* AppDelegate.m */,
+				EF3A3F101D377E6D00919934 /* ViewController.h */,
+				EF3A3F111D377E6D00919934 /* ViewController.m */,
+				EF3A3F131D377E6D00919934 /* Main.storyboard */,
+				EF3A3F161D377E6D00919934 /* Assets.xcassets */,
+				EF3A3F181D377E6D00919934 /* LaunchScreen.storyboard */,
+				EF3A3F1B1D377E6D00919934 /* Info.plist */,
+				EF3A3F0A1D377E6D00919934 /* Supporting Files */,
+			);
+			path = ChatClient;
+			sourceTree = "<group>";
+		};
+		EF3A3F0A1D377E6D00919934 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF3A3F0B1D377E6D00919934 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF3A3F231D377E6D00919934 /* ChatClientTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF3A3F241D377E6D00919934 /* ChatClientTests.m */,
+				EF3A3F261D377E6D00919934 /* Info.plist */,
+			);
+			path = ChatClientTests;
+			sourceTree = "<group>";
+		};
+		EF3A3F2E1D377E6D00919934 /* ChatClientUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF3A3F2F1D377E6D00919934 /* ChatClientUITests.m */,
+				EF3A3F311D377E6D00919934 /* Info.plist */,
+			);
+			path = ChatClientUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF3A3F061D377E6D00919934 /* ChatClient */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF3A3F341D377E6D00919934 /* Build configuration list for PBXNativeTarget "ChatClient" */;
+			buildPhases = (
+				EF3A3F031D377E6D00919934 /* Sources */,
+				EF3A3F041D377E6D00919934 /* Frameworks */,
+				EF3A3F051D377E6D00919934 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ChatClient;
+			productName = ChatClient;
+			productReference = EF3A3F071D377E6D00919934 /* ChatClient.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF3A3F1F1D377E6D00919934 /* ChatClientTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF3A3F371D377E6D00919934 /* Build configuration list for PBXNativeTarget "ChatClientTests" */;
+			buildPhases = (
+				EF3A3F1C1D377E6D00919934 /* Sources */,
+				EF3A3F1D1D377E6D00919934 /* Frameworks */,
+				EF3A3F1E1D377E6D00919934 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF3A3F221D377E6D00919934 /* PBXTargetDependency */,
+			);
+			name = ChatClientTests;
+			productName = ChatClientTests;
+			productReference = EF3A3F201D377E6D00919934 /* ChatClientTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF3A3F2A1D377E6D00919934 /* ChatClientUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF3A3F3A1D377E6D00919934 /* Build configuration list for PBXNativeTarget "ChatClientUITests" */;
+			buildPhases = (
+				EF3A3F271D377E6D00919934 /* Sources */,
+				EF3A3F281D377E6D00919934 /* Frameworks */,
+				EF3A3F291D377E6D00919934 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF3A3F2D1D377E6D00919934 /* PBXTargetDependency */,
+			);
+			name = ChatClientUITests;
+			productName = ChatClientUITests;
+			productReference = EF3A3F2B1D377E6D00919934 /* ChatClientUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF3A3EFF1D377E6D00919934 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "炎檬";
+				TargetAttributes = {
+					EF3A3F061D377E6D00919934 = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7F84KTN5ZK;
+					};
+					EF3A3F1F1D377E6D00919934 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = EF3A3F061D377E6D00919934;
+					};
+					EF3A3F2A1D377E6D00919934 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = EF3A3F061D377E6D00919934;
+					};
+				};
+			};
+			buildConfigurationList = EF3A3F021D377E6D00919934 /* Build configuration list for PBXProject "ChatClient" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF3A3EFE1D377E6D00919934;
+			productRefGroup = EF3A3F081D377E6D00919934 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF3A3F061D377E6D00919934 /* ChatClient */,
+				EF3A3F1F1D377E6D00919934 /* ChatClientTests */,
+				EF3A3F2A1D377E6D00919934 /* ChatClientUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF3A3F051D377E6D00919934 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3A3F1A1D377E6D00919934 /* LaunchScreen.storyboard in Resources */,
+				EF3A3F171D377E6D00919934 /* Assets.xcassets in Resources */,
+				EF3A3F151D377E6D00919934 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF3A3F1E1D377E6D00919934 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF3A3F291D377E6D00919934 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF3A3F031D377E6D00919934 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3A3F121D377E6D00919934 /* ViewController.m in Sources */,
+				EF3A3F0F1D377E6D00919934 /* AppDelegate.m in Sources */,
+				EF3A3F0C1D377E6D00919934 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF3A3F1C1D377E6D00919934 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3A3F251D377E6D00919934 /* ChatClientTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF3A3F271D377E6D00919934 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3A3F301D377E6D00919934 /* ChatClientUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF3A3F221D377E6D00919934 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF3A3F061D377E6D00919934 /* ChatClient */;
+			targetProxy = EF3A3F211D377E6D00919934 /* PBXContainerItemProxy */;
+		};
+		EF3A3F2D1D377E6D00919934 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF3A3F061D377E6D00919934 /* ChatClient */;
+			targetProxy = EF3A3F2C1D377E6D00919934 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF3A3F131D377E6D00919934 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF3A3F141D377E6D00919934 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF3A3F181D377E6D00919934 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF3A3F191D377E6D00919934 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF3A3F321D377E6D00919934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF3A3F331D377E6D00919934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF3A3F351D377E6D00919934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ChatClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.juangua.ChatClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		EF3A3F361D377E6D00919934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = ChatClient/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.juangua.ChatClient;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		EF3A3F381D377E6D00919934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ChatClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.juangua.ChatClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatClient.app/ChatClient";
+			};
+			name = Debug;
+		};
+		EF3A3F391D377E6D00919934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ChatClientTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.juangua.ChatClientTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ChatClient.app/ChatClient";
+			};
+			name = Release;
+		};
+		EF3A3F3B1D377E6D00919934 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ChatClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.juangua.ChatClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ChatClient;
+			};
+			name = Debug;
+		};
+		EF3A3F3C1D377E6D00919934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ChatClientUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.juangua.ChatClientUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ChatClient;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF3A3F021D377E6D00919934 /* Build configuration list for PBXProject "ChatClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF3A3F321D377E6D00919934 /* Debug */,
+				EF3A3F331D377E6D00919934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF3A3F341D377E6D00919934 /* Build configuration list for PBXNativeTarget "ChatClient" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF3A3F351D377E6D00919934 /* Debug */,
+				EF3A3F361D377E6D00919934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF3A3F371D377E6D00919934 /* Build configuration list for PBXNativeTarget "ChatClientTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF3A3F381D377E6D00919934 /* Debug */,
+				EF3A3F391D377E6D00919934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF3A3F3A1D377E6D00919934 /* Build configuration list for PBXNativeTarget "ChatClientUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF3A3F3B1D377E6D00919934 /* Debug */,
+				EF3A3F3C1D377E6D00919934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF3A3EFF1D377E6D00919934 /* Project object */;
+}
