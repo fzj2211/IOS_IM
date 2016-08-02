@@ -36,7 +36,7 @@
 - (void)setupViews {
     self.view.backgroundColor = [UIColor whiteColor];
     self.label = [[UILabel alloc]initWithFrame:CGRectMake(100, 200, 200, 50)];
-    //self.label.font = [UIFont fontWithName:@"Arial-BoldItalicMT" size:15];
+    self.label.font = [UIFont fontWithName:@"Arial-BoldItalicMT" size:15];
     self.label.textColor = [UIColor blackColor];
     self.label.backgroundColor = [UIColor greenColor];
     [self.view addSubview:self.label];
@@ -112,12 +112,9 @@
                 ssize_t count;
                 size_t len=sizeof(buf);
                 NSString *str = @"";
-                //do {
-                    count=recv(peerfd, buf, len, 0);
-                    str = [NSString stringWithCString:buf encoding:NSUTF8StringEncoding];
-                    NSLog(@"%@",str);
-//                    [self performSelectorOnMainThread:@selector(showMessage:) withObject:str waitUntilDone:NO];
-                //} while (count>0);
+                count=recv(peerfd, buf, len, 0);
+                str = [NSString stringWithCString:buf encoding:NSUTF8StringEncoding];
+                NSLog(@"%@",str);
                 if (count>0) {
                     [self performSelectorOnMainThread:@selector(showMessage:) withObject:str waitUntilDone:NO];
                 }
