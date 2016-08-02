@@ -15,6 +15,7 @@
 @interface TextViewController ()
 
 @property(nonatomic, strong) UILabel *label;
+@property(nonatomic, strong) UIButton *creatUDPSocketBtn;
 
 @end
 
@@ -24,7 +25,7 @@
     [super viewDidLoad];
     [self creatBackgroundMode];
     [self setupViews];
-    NSThread *socketThread = [[NSThread alloc]  initWithTarget:self selector:@selector(creatSocket) object:nil];
+    NSThread *socketThread = [[NSThread alloc]  initWithTarget:self selector:@selector(creatTCPSocket) object:nil];
     [socketThread start];
 }
 
@@ -35,11 +36,15 @@
 
 - (void)setupViews {
     self.view.backgroundColor = [UIColor whiteColor];
-    self.label = [[UILabel alloc]initWithFrame:CGRectMake(100, 200, 200, 50)];
+    
+    CGRect rect = CGRectInset(self.view.frame, 50, 150);
+    self.label = [[UILabel alloc]initWithFrame:rect];
+    [self.label setNumberOfLines:0];
     self.label.font = [UIFont fontWithName:@"Arial-BoldItalicMT" size:15];
     self.label.textColor = [UIColor blackColor];
     self.label.backgroundColor = [UIColor greenColor];
     [self.view addSubview:self.label];
+    
 }
 
 - (void)showMessage:(NSString *)str{
@@ -68,7 +73,7 @@
     [player play]; //播放
 }
 
-- (void)creatSocket {
+- (void)creatTCPSocket {
     int err;
     int fd = socket(PF_INET, SOCK_STREAM, 0);
     BOOL success = (!(fd == -1));
