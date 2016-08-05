@@ -15,6 +15,9 @@
 		EF3A3EDB1D37403C00919934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3A3ED91D37403C00919934 /* LaunchScreen.storyboard */; };
 		EF3A3EE61D37403C00919934 /* ChatServerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3A3EE51D37403C00919934 /* ChatServerTests.m */; };
 		EF3A3EF11D37403C00919934 /* ChatServerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3A3EF01D37403C00919934 /* ChatServerUITests.m */; };
+		EFEEE0461D53527700F7405B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEEE0451D53527700F7405B /* main.m */; };
+		EFF6D6ED1D50C90B00D224F1 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF6D6EC1D50C90B00D224F1 /* TextViewController.m */; };
+		EFF6D6F01D50C94700D224F1 /* background.wav in Resources */ = {isa = PBXBuildFile; fileRef = EFF6D6EF1D50C94700D224F1 /* background.wav */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,18 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		EFEEE0411D53527700F7405B /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		EF3A3EC81D37403B00919934 /* ChatServer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatServer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3A3ECC1D37403B00919934 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -51,6 +66,11 @@
 		EF3A3EEC1D37403C00919934 /* ChatServerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatServerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3A3EF01D37403C00919934 /* ChatServerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatServerUITests.m; sourceTree = "<group>"; };
 		EF3A3EF21D37403C00919934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFEEE0431D53527700F7405B /* 11111 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 11111; sourceTree = BUILT_PRODUCTS_DIR; };
+		EFEEE0451D53527700F7405B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EFF6D6EB1D50C90B00D224F1 /* TextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
+		EFF6D6EC1D50C90B00D224F1 /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
+		EFF6D6EF1D50C94700D224F1 /* background.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = background.wav; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,15 +95,24 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EFEEE0401D53527700F7405B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		EF3A3EBF1D37403B00919934 = {
 			isa = PBXGroup;
 			children = (
+				EFF6D6EE1D50C94700D224F1 /* Resources */,
 				EF3A3ECA1D37403B00919934 /* ChatServer */,
 				EF3A3EE41D37403C00919934 /* ChatServerTests */,
 				EF3A3EEF1D37403C00919934 /* ChatServerUITests */,
+				EFEEE0441D53527700F7405B /* 11111 */,
 				EF3A3EC91D37403B00919934 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +123,7 @@
 				EF3A3EC81D37403B00919934 /* ChatServer.app */,
 				EF3A3EE11D37403C00919934 /* ChatServerTests.xctest */,
 				EF3A3EEC1D37403C00919934 /* ChatServerUITests.xctest */,
+				EFEEE0431D53527700F7405B /* 11111 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +134,8 @@
 				EF3A3ECE1D37403B00919934 /* AppDelegate.h */,
 				EF3A3ECF1D37403B00919934 /* AppDelegate.m */,
 				EF3A3ED11D37403B00919934 /* ViewController.h */,
+				EFF6D6EB1D50C90B00D224F1 /* TextViewController.h */,
+				EFF6D6EC1D50C90B00D224F1 /* TextViewController.m */,
 				EF3A3ED21D37403B00919934 /* ViewController.m */,
 				EF3A3ED41D37403B00919934 /* Main.storyboard */,
 				EF3A3ED71D37403C00919934 /* Assets.xcassets */,
@@ -138,6 +170,22 @@
 				EF3A3EF21D37403C00919934 /* Info.plist */,
 			);
 			path = ChatServerUITests;
+			sourceTree = "<group>";
+		};
+		EFEEE0441D53527700F7405B /* 11111 */ = {
+			isa = PBXGroup;
+			children = (
+				EFEEE0451D53527700F7405B /* main.m */,
+			);
+			path = 11111;
+			sourceTree = "<group>";
+		};
+		EFF6D6EE1D50C94700D224F1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				EFF6D6EF1D50C94700D224F1 /* background.wav */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,6 +244,23 @@
 			productReference = EF3A3EEC1D37403C00919934 /* ChatServerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		EFEEE0421D53527700F7405B /* 11111 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EFEEE0491D53527700F7405B /* Build configuration list for PBXNativeTarget "11111" */;
+			buildPhases = (
+				EFEEE03F1D53527700F7405B /* Sources */,
+				EFEEE0401D53527700F7405B /* Frameworks */,
+				EFEEE0411D53527700F7405B /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 11111;
+			productName = 11111;
+			productReference = EFEEE0431D53527700F7405B /* 11111 */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -217,6 +282,9 @@
 						CreatedOnToolsVersion = 7.3.1;
 						TestTargetID = EF3A3EC71D37403B00919934;
 					};
+					EFEEE0421D53527700F7405B = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 				};
 			};
 			buildConfigurationList = EF3A3EC31D37403B00919934 /* Build configuration list for PBXProject "ChatServer" */;
@@ -235,6 +303,7 @@
 				EF3A3EC71D37403B00919934 /* ChatServer */,
 				EF3A3EE01D37403C00919934 /* ChatServerTests */,
 				EF3A3EEB1D37403C00919934 /* ChatServerUITests */,
+				EFEEE0421D53527700F7405B /* 11111 */,
 			);
 		};
 /* End PBXProject section */
@@ -246,6 +315,7 @@
 			files = (
 				EF3A3EDB1D37403C00919934 /* LaunchScreen.storyboard in Resources */,
 				EF3A3ED81D37403C00919934 /* Assets.xcassets in Resources */,
+				EFF6D6F01D50C94700D224F1 /* background.wav in Resources */,
 				EF3A3ED61D37403B00919934 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -274,6 +344,7 @@
 				EF3A3ED31D37403B00919934 /* ViewController.m in Sources */,
 				EF3A3ED01D37403B00919934 /* AppDelegate.m in Sources */,
 				EF3A3ECD1D37403B00919934 /* main.m in Sources */,
+				EFF6D6ED1D50C90B00D224F1 /* TextViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,6 +361,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF3A3EF11D37403C00919934 /* ChatServerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EFEEE03F1D53527700F7405B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EFEEE0461D53527700F7405B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -486,6 +565,26 @@
 			};
 			name = Release;
 		};
+		EFEEE0471D53527700F7405B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EFEEE0481D53527700F7405B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -505,6 +604,7 @@
 				EF3A3EF71D37403C00919934 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF3A3EF81D37403C00919934 /* Build configuration list for PBXNativeTarget "ChatServerTests" */ = {
 			isa = XCConfigurationList;
@@ -513,12 +613,22 @@
 				EF3A3EFA1D37403C00919934 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF3A3EFB1D37403C00919934 /* Build configuration list for PBXNativeTarget "ChatServerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EF3A3EFC1D37403C00919934 /* Debug */,
 				EF3A3EFD1D37403C00919934 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EFEEE0491D53527700F7405B /* Build configuration list for PBXNativeTarget "11111" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFEEE0471D53527700F7405B /* Debug */,
+				EFEEE0481D53527700F7405B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};

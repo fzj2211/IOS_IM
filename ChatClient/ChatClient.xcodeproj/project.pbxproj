@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EF3574591D54C0AE009AF252 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3574581D54C0AE009AF252 /* main.m */; };
 		EF3A3F0C1D377E6D00919934 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3A3F0B1D377E6D00919934 /* main.m */; };
 		EF3A3F0F1D377E6D00919934 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3A3F0E1D377E6D00919934 /* AppDelegate.m */; };
 		EF3A3F121D377E6D00919934 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3A3F111D377E6D00919934 /* ViewController.m */; };
@@ -34,7 +35,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		EF3574541D54C0AE009AF252 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		EF3574561D54C0AE009AF252 /* 11111 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 11111; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF3574581D54C0AE009AF252 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EF3A3F071D377E6D00919934 /* ChatClient.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatClient.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF3A3F0B1D377E6D00919934 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EF3A3F0D1D377E6D00919934 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -54,6 +69,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EF3574531D54C0AE009AF252 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF3A3F041D377E6D00919934 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,12 +100,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EF3574571D54C0AE009AF252 /* 11111 */ = {
+			isa = PBXGroup;
+			children = (
+				EF3574581D54C0AE009AF252 /* main.m */,
+			);
+			path = 11111;
+			sourceTree = "<group>";
+		};
 		EF3A3EFE1D377E6D00919934 = {
 			isa = PBXGroup;
 			children = (
 				EF3A3F091D377E6D00919934 /* ChatClient */,
 				EF3A3F231D377E6D00919934 /* ChatClientTests */,
 				EF3A3F2E1D377E6D00919934 /* ChatClientUITests */,
+				EF3574571D54C0AE009AF252 /* 11111 */,
 				EF3A3F081D377E6D00919934 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -94,6 +125,7 @@
 				EF3A3F071D377E6D00919934 /* ChatClient.app */,
 				EF3A3F201D377E6D00919934 /* ChatClientTests.xctest */,
 				EF3A3F2B1D377E6D00919934 /* ChatClientUITests.xctest */,
+				EF3574561D54C0AE009AF252 /* 11111 */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -143,6 +175,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EF3574551D54C0AE009AF252 /* 11111 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF35745A1D54C0AE009AF252 /* Build configuration list for PBXNativeTarget "11111" */;
+			buildPhases = (
+				EF3574521D54C0AE009AF252 /* Sources */,
+				EF3574531D54C0AE009AF252 /* Frameworks */,
+				EF3574541D54C0AE009AF252 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = 11111;
+			productName = 11111;
+			productReference = EF3574561D54C0AE009AF252 /* 11111 */;
+			productType = "com.apple.product-type.tool";
+		};
 		EF3A3F061D377E6D00919934 /* ChatClient */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF3A3F341D377E6D00919934 /* Build configuration list for PBXNativeTarget "ChatClient" */;
@@ -205,6 +254,9 @@
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "炎檬";
 				TargetAttributes = {
+					EF3574551D54C0AE009AF252 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
 					EF3A3F061D377E6D00919934 = {
 						CreatedOnToolsVersion = 7.3.1;
 						DevelopmentTeam = 7F84KTN5ZK;
@@ -235,6 +287,7 @@
 				EF3A3F061D377E6D00919934 /* ChatClient */,
 				EF3A3F1F1D377E6D00919934 /* ChatClientTests */,
 				EF3A3F2A1D377E6D00919934 /* ChatClientUITests */,
+				EF3574551D54C0AE009AF252 /* 11111 */,
 			);
 		};
 /* End PBXProject section */
@@ -267,6 +320,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EF3574521D54C0AE009AF252 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF3574591D54C0AE009AF252 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EF3A3F031D377E6D00919934 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -328,6 +389,26 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EF35745B1D54C0AE009AF252 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EF35745C1D54C0AE009AF252 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 		EF3A3F321D377E6D00919934 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -489,6 +570,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EF35745A1D54C0AE009AF252 /* Build configuration list for PBXNativeTarget "11111" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF35745B1D54C0AE009AF252 /* Debug */,
+				EF35745C1D54C0AE009AF252 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		EF3A3F021D377E6D00919934 /* Build configuration list for PBXProject "ChatClient" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -505,6 +594,7 @@
 				EF3A3F361D377E6D00919934 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF3A3F371D377E6D00919934 /* Build configuration list for PBXNativeTarget "ChatClientTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +603,7 @@
 				EF3A3F391D377E6D00919934 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF3A3F3A1D377E6D00919934 /* Build configuration list for PBXNativeTarget "ChatClientUITests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +612,7 @@
 				EF3A3F3C1D377E6D00919934 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
