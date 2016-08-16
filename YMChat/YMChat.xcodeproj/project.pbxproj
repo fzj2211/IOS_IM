@@ -1,0 +1,524 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EF287D2E1D6343A90005C78A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287D2D1D6343A90005C78A /* main.m */; };
+		EF287D311D6343A90005C78A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287D301D6343A90005C78A /* AppDelegate.m */; };
+		EF287D341D6343A90005C78A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287D331D6343A90005C78A /* ViewController.m */; };
+		EF287D371D6343A90005C78A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF287D351D6343A90005C78A /* Main.storyboard */; };
+		EF287D391D6343A90005C78A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EF287D381D6343A90005C78A /* Assets.xcassets */; };
+		EF287D3C1D6343A90005C78A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF287D3A1D6343A90005C78A /* LaunchScreen.storyboard */; };
+		EF287D471D6343A90005C78A /* YMChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287D461D6343A90005C78A /* YMChatTests.m */; };
+		EF287D521D6343A90005C78A /* YMChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287D511D6343A90005C78A /* YMChatUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EF287D431D6343A90005C78A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF287D211D6343A90005C78A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF287D281D6343A90005C78A;
+			remoteInfo = YMChat;
+		};
+		EF287D4E1D6343A90005C78A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EF287D211D6343A90005C78A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EF287D281D6343A90005C78A;
+			remoteInfo = YMChat;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EF287D291D6343A90005C78A /* YMChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YMChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF287D2D1D6343A90005C78A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EF287D2F1D6343A90005C78A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		EF287D301D6343A90005C78A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		EF287D321D6343A90005C78A /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		EF287D331D6343A90005C78A /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		EF287D361D6343A90005C78A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EF287D381D6343A90005C78A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EF287D3B1D6343A90005C78A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EF287D3D1D6343A90005C78A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF287D421D6343A90005C78A /* YMChatTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YMChatTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF287D461D6343A90005C78A /* YMChatTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMChatTests.m; sourceTree = "<group>"; };
+		EF287D481D6343A90005C78A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF287D4D1D6343A90005C78A /* YMChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YMChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF287D511D6343A90005C78A /* YMChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMChatUITests.m; sourceTree = "<group>"; };
+		EF287D531D6343A90005C78A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EF287D261D6343A90005C78A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF287D3F1D6343A90005C78A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF287D4A1D6343A90005C78A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EF287D201D6343A90005C78A = {
+			isa = PBXGroup;
+			children = (
+				EF287D2B1D6343A90005C78A /* YMChat */,
+				EF287D451D6343A90005C78A /* YMChatTests */,
+				EF287D501D6343A90005C78A /* YMChatUITests */,
+				EF287D2A1D6343A90005C78A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF287D2A1D6343A90005C78A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EF287D291D6343A90005C78A /* YMChat.app */,
+				EF287D421D6343A90005C78A /* YMChatTests.xctest */,
+				EF287D4D1D6343A90005C78A /* YMChatUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EF287D2B1D6343A90005C78A /* YMChat */ = {
+			isa = PBXGroup;
+			children = (
+				EF287D2F1D6343A90005C78A /* AppDelegate.h */,
+				EF287D301D6343A90005C78A /* AppDelegate.m */,
+				EF287D321D6343A90005C78A /* ViewController.h */,
+				EF287D331D6343A90005C78A /* ViewController.m */,
+				EF287D351D6343A90005C78A /* Main.storyboard */,
+				EF287D381D6343A90005C78A /* Assets.xcassets */,
+				EF287D3A1D6343A90005C78A /* LaunchScreen.storyboard */,
+				EF287D3D1D6343A90005C78A /* Info.plist */,
+				EF287D2C1D6343A90005C78A /* Supporting Files */,
+			);
+			path = YMChat;
+			sourceTree = "<group>";
+		};
+		EF287D2C1D6343A90005C78A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EF287D2D1D6343A90005C78A /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EF287D451D6343A90005C78A /* YMChatTests */ = {
+			isa = PBXGroup;
+			children = (
+				EF287D461D6343A90005C78A /* YMChatTests.m */,
+				EF287D481D6343A90005C78A /* Info.plist */,
+			);
+			path = YMChatTests;
+			sourceTree = "<group>";
+		};
+		EF287D501D6343A90005C78A /* YMChatUITests */ = {
+			isa = PBXGroup;
+			children = (
+				EF287D511D6343A90005C78A /* YMChatUITests.m */,
+				EF287D531D6343A90005C78A /* Info.plist */,
+			);
+			path = YMChatUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EF287D281D6343A90005C78A /* YMChat */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF287D561D6343A90005C78A /* Build configuration list for PBXNativeTarget "YMChat" */;
+			buildPhases = (
+				EF287D251D6343A90005C78A /* Sources */,
+				EF287D261D6343A90005C78A /* Frameworks */,
+				EF287D271D6343A90005C78A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YMChat;
+			productName = YMChat;
+			productReference = EF287D291D6343A90005C78A /* YMChat.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF287D411D6343A90005C78A /* YMChatTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF287D591D6343A90005C78A /* Build configuration list for PBXNativeTarget "YMChatTests" */;
+			buildPhases = (
+				EF287D3E1D6343A90005C78A /* Sources */,
+				EF287D3F1D6343A90005C78A /* Frameworks */,
+				EF287D401D6343A90005C78A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF287D441D6343A90005C78A /* PBXTargetDependency */,
+			);
+			name = YMChatTests;
+			productName = YMChatTests;
+			productReference = EF287D421D6343A90005C78A /* YMChatTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EF287D4C1D6343A90005C78A /* YMChatUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EF287D5C1D6343A90005C78A /* Build configuration list for PBXNativeTarget "YMChatUITests" */;
+			buildPhases = (
+				EF287D491D6343A90005C78A /* Sources */,
+				EF287D4A1D6343A90005C78A /* Frameworks */,
+				EF287D4B1D6343A90005C78A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EF287D4F1D6343A90005C78A /* PBXTargetDependency */,
+			);
+			name = YMChatUITests;
+			productName = YMChatUITests;
+			productReference = EF287D4D1D6343A90005C78A /* YMChatUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EF287D211D6343A90005C78A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = juangua;
+				TargetAttributes = {
+					EF287D281D6343A90005C78A = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7F84KTN5ZK;
+					};
+					EF287D411D6343A90005C78A = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7F84KTN5ZK;
+						TestTargetID = EF287D281D6343A90005C78A;
+					};
+					EF287D4C1D6343A90005C78A = {
+						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 7F84KTN5ZK;
+						TestTargetID = EF287D281D6343A90005C78A;
+					};
+				};
+			};
+			buildConfigurationList = EF287D241D6343A90005C78A /* Build configuration list for PBXProject "YMChat" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EF287D201D6343A90005C78A;
+			productRefGroup = EF287D2A1D6343A90005C78A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EF287D281D6343A90005C78A /* YMChat */,
+				EF287D411D6343A90005C78A /* YMChatTests */,
+				EF287D4C1D6343A90005C78A /* YMChatUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EF287D271D6343A90005C78A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF287D3C1D6343A90005C78A /* LaunchScreen.storyboard in Resources */,
+				EF287D391D6343A90005C78A /* Assets.xcassets in Resources */,
+				EF287D371D6343A90005C78A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF287D401D6343A90005C78A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF287D4B1D6343A90005C78A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EF287D251D6343A90005C78A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF287D341D6343A90005C78A /* ViewController.m in Sources */,
+				EF287D311D6343A90005C78A /* AppDelegate.m in Sources */,
+				EF287D2E1D6343A90005C78A /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF287D3E1D6343A90005C78A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF287D471D6343A90005C78A /* YMChatTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF287D491D6343A90005C78A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EF287D521D6343A90005C78A /* YMChatUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EF287D441D6343A90005C78A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF287D281D6343A90005C78A /* YMChat */;
+			targetProxy = EF287D431D6343A90005C78A /* PBXContainerItemProxy */;
+		};
+		EF287D4F1D6343A90005C78A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EF287D281D6343A90005C78A /* YMChat */;
+			targetProxy = EF287D4E1D6343A90005C78A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EF287D351D6343A90005C78A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF287D361D6343A90005C78A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EF287D3A1D6343A90005C78A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EF287D3B1D6343A90005C78A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EF287D541D6343A90005C78A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EF287D551D6343A90005C78A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EF287D571D6343A90005C78A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YMChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.juangua.YMChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		EF287D581D6343A90005C78A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = YMChat/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.juangua.YMChat;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		EF287D5A1D6343A90005C78A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YMChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.juangua.YMChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YMChat.app/YMChat";
+			};
+			name = Debug;
+		};
+		EF287D5B1D6343A90005C78A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YMChatTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.juangua.YMChatTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/YMChat.app/YMChat";
+			};
+			name = Release;
+		};
+		EF287D5D1D6343A90005C78A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YMChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.juangua.YMChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YMChat;
+			};
+			name = Debug;
+		};
+		EF287D5E1D6343A90005C78A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = YMChatUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.juangua.YMChatUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = YMChat;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EF287D241D6343A90005C78A /* Build configuration list for PBXProject "YMChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF287D541D6343A90005C78A /* Debug */,
+				EF287D551D6343A90005C78A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EF287D561D6343A90005C78A /* Build configuration list for PBXNativeTarget "YMChat" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF287D571D6343A90005C78A /* Debug */,
+				EF287D581D6343A90005C78A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF287D591D6343A90005C78A /* Build configuration list for PBXNativeTarget "YMChatTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF287D5A1D6343A90005C78A /* Debug */,
+				EF287D5B1D6343A90005C78A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EF287D5C1D6343A90005C78A /* Build configuration list for PBXNativeTarget "YMChatUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EF287D5D1D6343A90005C78A /* Debug */,
+				EF287D5E1D6343A90005C78A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EF287D211D6343A90005C78A /* Project object */;
+}

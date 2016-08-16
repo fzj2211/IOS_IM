@@ -1,15 +1,17 @@
 //
 //  main.m
-//  11111
+//  1111
 //
-//  Created by 炎檬 on 16/8/5.
-//  Copyright © 2016年 炎檬. All rights reserved.
+//  Created by 炎檬 on 16/8/16.
+//  Copyright © 2016年 juangua. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import <sys/socket.h>
 #import <netinet/in.h>
 #import <arpa/inet.h>
+
+#define YM_PORT 11111
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
@@ -26,9 +28,10 @@ int main(int argc, const char * argv[]) {
         }
         
         to.sin_family = AF_INET;                   /*协议族*/
-        to.sin_port = htons(17777);                 /*本地端口*/
-        //to.sin_addr.s_addr = inet_addr("10.1.4.227");
-        to.sin_addr.s_addr = INADDR_BROADCAST;
+        to.sin_port = htons(11111);                 /*本地端口*/
+//        to.sin_addr.s_addr = htonl(INADDR_BROADCAST);
+        to.sin_addr.s_addr = inet_addr("224.0.0.100");
+        
         
         int opt = 1;
         int nb = 0;
@@ -49,7 +52,6 @@ int main(int argc, const char * argv[]) {
             /*处理过程*/
             NSLog(@"链接UDP成功!");
         }
-
     }
     return 0;
 }

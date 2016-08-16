@@ -40,14 +40,14 @@
     [self.view addSubview:self.inputView];
     
     self.sendButton = [[UIButton alloc]initWithFrame:CGRectMake(self.inputView.center.x-50, self.inputView.frame.origin.y + 310, 100, 50)];
-    //[self.sendButton addTarget:self action:@selector(sendButtonClicked) forControlEvents:UIControlEventTouchUpInside];
+    [self.sendButton addTarget:self action:@selector(sendButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     self.sendButton.tintColor = [UIColor blackColor];
     [self.sendButton setTitle:@"发送" forState:UIControlStateNormal];
     self.sendButton.backgroundColor = [UIColor redColor];
     [self.view addSubview:self.sendButton];
     
     self.broadcastButton = [[UIButton alloc]initWithFrame:CGRectMake(self.inputView.center.x-50, self.inputView.frame.origin.y - 70, 100, 60)];
-    [self.broadcastButton addTarget:self action:@selector(creatUDPSocket) forControlEvents:UIControlEventTouchUpInside];
+    [self.broadcastButton addTarget:self action:@selector(sendButtonClicked) forControlEvents:UIControlEventTouchUpInside];
     self.broadcastButton.tintColor = [UIColor blackColor];
     [self.broadcastButton setTitle:@"发送广播" forState:UIControlStateNormal];
     self.broadcastButton.backgroundColor = [UIColor yellowColor];
@@ -57,7 +57,7 @@
 
 - (void)sendButtonClicked {
     self.textMessage = self.inputView.text;
-    [self creatTCPSocket];
+    [self creatUDPSocket];
 }
 
 - (void)creatTCPSocket {
@@ -72,7 +72,7 @@
         memset(&peeraddr, 0, sizeof(peeraddr));
         peeraddr.sin_len=sizeof(peeraddr);
         peeraddr.sin_family=PF_INET;
-        peeraddr.sin_port=htons(17777);
+        peeraddr.sin_port=htons(YM_PORT);
         //这个地址是服务器的地址，
         peeraddr.sin_addr.s_addr=inet_addr("10.1.5.113");
         socklen_t addrLen;
@@ -117,7 +117,16 @@
     int s;                                     /*套接字文件描述符*/
     struct sockaddr_in to;                     /*接收方的地址信息*/
     ssize_t n;                                 /*发送到的数据长度*/
-    char buf[10] = "yanmeng";                 /*发送数据缓冲区*/
+    NSUInteger length = [self.textMessage length];
+    char buf[1024] = {0};
+    
+    [self.textMessage  getBytes:buf
+                      maxLength:(1024 - 1)
+                     usedLength:NULL
+                       encoding:NSUTF8StringEncoding
+                        options:0
+                          range:NSMakeRange(0, length)
+                 remainingRange:NULL];                 /*发送数据缓冲区*/
     s = socket(AF_INET, SOCK_DGRAM, 0); /*初始化一个IPv4族的数据报套接字*/
     if (s == -1) {                             /*检查是否正常初始化socket*/
         perror("socket");
@@ -125,9 +134,8 @@
     }
     
     to.sin_family = AF_INET;                   /*协议族*/
-    to.sin_port = htons(17777);                 /*本地端口*/
-    //to.sin_addr.s_addr = inet_addr("10.1.4.227");
-    to.sin_addr.s_addr = INADDR_BROADCAST;
+    to.sin_port = htons(YM_PORT);                 /*本地端口*/
+    to.sin_addr.s_addr = inet_addr(YM_GROUP);
     
     int opt = 1;
     int nb = 0;
@@ -137,8 +145,6 @@
         NSLog(@"set socket error...");
     }
     
-    while (true) {
-        sleep(1);
         n = sendto(s, buf, sizeof(buf), 0, (struct sockaddr*)&to, sizeof(to));
         /*将数据buff发送到主机to上*/
         if(n == -1){                       /*发送数据出错*/
@@ -147,7 +153,6 @@
         }
         /*处理过程*/
         NSLog(@"链接UDP成功!");
-    }
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {

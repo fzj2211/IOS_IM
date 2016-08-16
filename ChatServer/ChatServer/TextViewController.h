@@ -7,6 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#define YM_PORT 11111
+#define YM_GROUP "224.0.0.100"
 
 @interface TextViewController : UIViewController
 

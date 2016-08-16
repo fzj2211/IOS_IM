@@ -41,6 +41,7 @@
     CGRect rect = CGRectInset(self.view.frame, 50, 150);
     self.label = [[UILabel alloc]initWithFrame:rect];
     [self.label setNumberOfLines:0];
+    self.label.textAlignment = NSTextAlignmentCenter;
     self.label.font = [UIFont fontWithName:@"Arial-BoldItalicMT" size:15];
     self.label.textColor = [UIColor blackColor];
     self.label.backgroundColor = [UIColor greenColor];
@@ -132,107 +133,49 @@
 }
 
 - (void)creatUDPSocket {
+    struct sockaddr_in addr;
+    int addrlen, sock;
+    ssize_t cnt;
+    struct ip_mreq mreq;
+    char message[50];
     
-//    // 绑定地址
-//    struct sockaddr_in addrto;
-//    bzero(&addrto, sizeof(struct sockaddr_in));
-//    addrto.sin_family = AF_INET;
-//    addrto.sin_addr.s_addr = htonl(INADDR_ANY);
-//    addrto.sin_port = htons(17777);
-//    
-//    // 广播地址
-//    struct sockaddr_in from;
-//    bzero(&from, sizeof(struct sockaddr_in));
-//    from.sin_family = AF_INET;
-//    from.sin_addr.s_addr = htonl(INADDR_ANY);
-//    from.sin_port = htons(17777);
-//    
-//    int sock = -1;
-//    if ((sock = socket(AF_INET, SOCK_DGRAM, 0)) == -1)
-//    {
-//        NSLog(@"socket error");
-//        return;
-//    }
-//    
-//    const int opt = 1;
-//    //设置该套接字为广播类型，
-//    int nb = 0;
-//    nb = setsockopt(sock, SOL_SOCKET, SO_BROADCAST, (char *)&opt, sizeof(opt));
-//    if(nb == -1)
-//    {
-//        NSLog(@"set socket error...");
-//        return;
-//    }
-//    
-//    if(bind(sock,(struct sockaddr *)&(addrto), sizeof(struct sockaddr_in)) == -1)
-//    {
-//        NSLog(@"bind error...");
-//        perror("bind");
-//        return;
-//    }
-//    
-//    int len = sizeof(struct sockaddr_in);
-//    char smsg[10] = {0};
-//    
-//    while(true)
-//    {
-//        //从广播地址接受消息
-//        NSLog(@"prepare to receive UDP broadcast");
-//        ssize_t ret = recvfrom(sock, smsg, sizeof(smsg), 0, (struct sockaddr*)&(from),(socklen_t*)&len);
-//        perror("recvfrom");
-//        NSString *str = [NSString stringWithCString:smsg encoding:NSUTF8StringEncoding];
-//        NSLog(@"%@",str);
-//        if (ret > 0) {
-//            [self performSelectorOnMainThread:@selector(showMessage:) withObject:str waitUntilDone:NO];
-//        }
-//    }
-    // 绑定地址
-    struct sockaddr_in addrto;
-    bzero(&addrto, sizeof(struct sockaddr_in));
-    addrto.sin_family = AF_INET;
-    addrto.sin_addr.s_addr = htonl(INADDR_ANY);
-    addrto.sin_port = htons(17777);
-    
-    // 广播地址
-    struct sockaddr_in from;
-    bzero(&from, sizeof(struct sockaddr_in));
-    from.sin_family = AF_INET;
-    from.sin_addr.s_addr = htonl(INADDR_ANY);
-    from.sin_port = htons(17777);
-    
-    int sock = -1;
-    if ((sock = socket(AF_INET, SOCK_DGRAM, 0)) == -1)
-    {
-        NSLog(@"socket error");
-//        return false;
+    /* set up socket */
+    sock = socket(AF_INET, SOCK_DGRAM, 0);
+    if (sock < 0) {
+        perror("socket");
+        exit(1);
     }
+    bzero((char *)&addr, sizeof(addr));
+    addr.sin_family = AF_INET;
+    addr.sin_addr.s_addr = htonl(INADDR_ANY);
+    addr.sin_port = htons(YM_PORT);
+    addrlen = sizeof(addr);
     
-    const int opt = 1;
-    //设置该套接字为广播类型
-    int nb = 0;
-    nb = setsockopt(sock, SOL_SOCKET, SO_BROADCAST, (char *)&opt, sizeof(opt));
-    if(nb == -1)
-    {
-        NSLog(@"set socket error...");
-//        return false;
+    /* receive */
+    if (bind(sock, (struct sockaddr *) &addr, sizeof(addr)) < 0) {
+        perror("bind");
+        exit(1);
     }
-    
-    if(bind(sock,(struct sockaddr *)&(addrto), sizeof(struct sockaddr_in)) == -1)
-    {
-        NSLog(@"bind error...");
-//        return false;
+    mreq.imr_multiaddr.s_addr = inet_addr(YM_GROUP);
+    mreq.imr_interface.s_addr = htonl(INADDR_ANY);
+    if (setsockopt(sock, IPPROTO_IP, IP_ADD_MEMBERSHIP,
+                   &mreq, sizeof(mreq)) < 0) {
+        perror("setsockopt mreq");
+        exit(1);
     }
-    
-    int len = sizeof(struct sockaddr_in);
-    char smsg[10] = {0};
-    
-    while(true)
-    {
-        //从广播地址接受消息
-        recvfrom(sock, smsg, sizeof(smsg), 0, (struct sockaddr*)&(from),(socklen_t*)&len);
-        NSString *str = [NSString stringWithCString:smsg encoding:NSUTF8StringEncoding];
-        NSLog(@"%@",str);
+    while (1) {
+        cnt = recvfrom(sock, message, sizeof(message), 0, (struct sockaddr *) &addr, (socklen_t *)&addrlen);
+        if (cnt < 0) {
+            perror("recvfrom");
+            exit(1);
+        } else if (cnt == 0) {
+            break;
+        }
+        printf("%s: message = \"%s\"\n", inet_ntoa(addr.sin_addr), message);
+        NSString *str = [NSString stringWithCString:message encoding:NSUTF8StringEncoding];
+        [self performSelectorOnMainThread:@selector(showMessage:) withObject:str waitUntilDone:NO];
     }
+
 }
 
 /*

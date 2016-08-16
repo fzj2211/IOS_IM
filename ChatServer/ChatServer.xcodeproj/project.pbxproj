@@ -15,7 +15,6 @@
 		EF3A3EDB1D37403C00919934 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF3A3ED91D37403C00919934 /* LaunchScreen.storyboard */; };
 		EF3A3EE61D37403C00919934 /* ChatServerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3A3EE51D37403C00919934 /* ChatServerTests.m */; };
 		EF3A3EF11D37403C00919934 /* ChatServerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3A3EF01D37403C00919934 /* ChatServerUITests.m */; };
-		EFEEE0461D53527700F7405B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EFEEE0451D53527700F7405B /* main.m */; };
 		EFF6D6ED1D50C90B00D224F1 /* TextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EFF6D6EC1D50C90B00D224F1 /* TextViewController.m */; };
 		EFF6D6F01D50C94700D224F1 /* background.wav in Resources */ = {isa = PBXBuildFile; fileRef = EFF6D6EF1D50C94700D224F1 /* background.wav */; };
 /* End PBXBuildFile section */
@@ -67,7 +66,6 @@
 		EF3A3EF01D37403C00919934 /* ChatServerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatServerUITests.m; sourceTree = "<group>"; };
 		EF3A3EF21D37403C00919934 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EFEEE0431D53527700F7405B /* 11111 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = 11111; sourceTree = BUILT_PRODUCTS_DIR; };
-		EFEEE0451D53527700F7405B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EFF6D6EB1D50C90B00D224F1 /* TextViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextViewController.h; sourceTree = "<group>"; };
 		EFF6D6EC1D50C90B00D224F1 /* TextViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TextViewController.m; sourceTree = "<group>"; };
 		EFF6D6EF1D50C94700D224F1 /* background.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = background.wav; sourceTree = "<group>"; };
@@ -112,7 +110,6 @@
 				EF3A3ECA1D37403B00919934 /* ChatServer */,
 				EF3A3EE41D37403C00919934 /* ChatServerTests */,
 				EF3A3EEF1D37403C00919934 /* ChatServerUITests */,
-				EFEEE0441D53527700F7405B /* 11111 */,
 				EF3A3EC91D37403B00919934 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -134,9 +131,9 @@
 				EF3A3ECE1D37403B00919934 /* AppDelegate.h */,
 				EF3A3ECF1D37403B00919934 /* AppDelegate.m */,
 				EF3A3ED11D37403B00919934 /* ViewController.h */,
+				EF3A3ED21D37403B00919934 /* ViewController.m */,
 				EFF6D6EB1D50C90B00D224F1 /* TextViewController.h */,
 				EFF6D6EC1D50C90B00D224F1 /* TextViewController.m */,
-				EF3A3ED21D37403B00919934 /* ViewController.m */,
 				EF3A3ED41D37403B00919934 /* Main.storyboard */,
 				EF3A3ED71D37403C00919934 /* Assets.xcassets */,
 				EF3A3ED91D37403C00919934 /* LaunchScreen.storyboard */,
@@ -170,14 +167,6 @@
 				EF3A3EF21D37403C00919934 /* Info.plist */,
 			);
 			path = ChatServerUITests;
-			sourceTree = "<group>";
-		};
-		EFEEE0441D53527700F7405B /* 11111 */ = {
-			isa = PBXGroup;
-			children = (
-				EFEEE0451D53527700F7405B /* main.m */,
-			);
-			path = 11111;
 			sourceTree = "<group>";
 		};
 		EFF6D6EE1D50C94700D224F1 /* Resources */ = {
@@ -368,7 +357,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFEEE0461D53527700F7405B /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -631,6 +619,7 @@
 				EFEEE0481D53527700F7405B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
