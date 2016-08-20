@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04EFC9B244BAF92C64FB742F /* libPods-YMChat.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A7F06992732C192F4A9977D8 /* libPods-YMChat.a */; };
+		EF0F5A481D64B0570085CA53 /* ChatFriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF0F5A471D64B0570085CA53 /* ChatFriendModel.m */; };
 		EF287D2E1D6343A90005C78A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287D2D1D6343A90005C78A /* main.m */; };
 		EF287D311D6343A90005C78A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287D301D6343A90005C78A /* AppDelegate.m */; };
 		EF287D341D6343A90005C78A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287D331D6343A90005C78A /* ViewController.m */; };
@@ -15,6 +17,10 @@
 		EF287D3C1D6343A90005C78A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EF287D3A1D6343A90005C78A /* LaunchScreen.storyboard */; };
 		EF287D471D6343A90005C78A /* YMChatTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287D461D6343A90005C78A /* YMChatTests.m */; };
 		EF287D521D6343A90005C78A /* YMChatUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287D511D6343A90005C78A /* YMChatUITests.m */; };
+		EF287D641D6356180005C78A /* YMSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = EF287D631D6356180005C78A /* YMSocket.m */; };
+		EF358A1B1D68174400F39681 /* YMChatTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF358A191D68174400F39681 /* YMChatTableViewCell.m */; };
+		EF358A1C1D68174400F39681 /* YMChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF358A1A1D68174400F39681 /* YMChatTableViewCell.xib */; };
+		EF358A1F1D68252200F39681 /* UserCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF358A1E1D68252200F39681 /* UserCellModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0A2B7DE7917CECC8F2E11DE9 /* Pods-YMChat.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YMChat.debug.xcconfig"; path = "Pods/Target Support Files/Pods-YMChat/Pods-YMChat.debug.xcconfig"; sourceTree = "<group>"; };
+		A7F06992732C192F4A9977D8 /* libPods-YMChat.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-YMChat.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D9859760978B090735880485 /* Pods-YMChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YMChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-YMChat/Pods-YMChat.release.xcconfig"; sourceTree = "<group>"; };
+		EF0F5A461D64B0570085CA53 /* ChatFriendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatFriendModel.h; sourceTree = "<group>"; };
+		EF0F5A471D64B0570085CA53 /* ChatFriendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatFriendModel.m; sourceTree = "<group>"; };
 		EF287D291D6343A90005C78A /* YMChat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YMChat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF287D2D1D6343A90005C78A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		EF287D2F1D6343A90005C78A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -51,6 +62,13 @@
 		EF287D4D1D6343A90005C78A /* YMChatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YMChatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF287D511D6343A90005C78A /* YMChatUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = YMChatUITests.m; sourceTree = "<group>"; };
 		EF287D531D6343A90005C78A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF287D621D6356180005C78A /* YMSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMSocket.h; sourceTree = "<group>"; };
+		EF287D631D6356180005C78A /* YMSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMSocket.m; sourceTree = "<group>"; };
+		EF358A181D68174400F39681 /* YMChatTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMChatTableViewCell.h; sourceTree = "<group>"; };
+		EF358A191D68174400F39681 /* YMChatTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMChatTableViewCell.m; sourceTree = "<group>"; };
+		EF358A1A1D68174400F39681 /* YMChatTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YMChatTableViewCell.xib; sourceTree = "<group>"; };
+		EF358A1D1D68252200F39681 /* UserCellModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCellModel.h; sourceTree = "<group>"; };
+		EF358A1E1D68252200F39681 /* UserCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCellModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04EFC9B244BAF92C64FB742F /* libPods-YMChat.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -78,6 +97,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ABF24DED4D3535E3D71A48C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0A2B7DE7917CECC8F2E11DE9 /* Pods-YMChat.debug.xcconfig */,
+				D9859760978B090735880485 /* Pods-YMChat.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		636723DF75961E9CC23B6808 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7F06992732C192F4A9977D8 /* libPods-YMChat.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EF287D201D6343A90005C78A = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +121,8 @@
 				EF287D451D6343A90005C78A /* YMChatTests */,
 				EF287D501D6343A90005C78A /* YMChatUITests */,
 				EF287D2A1D6343A90005C78A /* Products */,
+				0ABF24DED4D3535E3D71A48C /* Pods */,
+				636723DF75961E9CC23B6808 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -103,6 +141,15 @@
 			children = (
 				EF287D2F1D6343A90005C78A /* AppDelegate.h */,
 				EF287D301D6343A90005C78A /* AppDelegate.m */,
+				EF358A1D1D68252200F39681 /* UserCellModel.h */,
+				EF358A1E1D68252200F39681 /* UserCellModel.m */,
+				EF0F5A461D64B0570085CA53 /* ChatFriendModel.h */,
+				EF0F5A471D64B0570085CA53 /* ChatFriendModel.m */,
+				EF358A181D68174400F39681 /* YMChatTableViewCell.h */,
+				EF358A191D68174400F39681 /* YMChatTableViewCell.m */,
+				EF358A1A1D68174400F39681 /* YMChatTableViewCell.xib */,
+				EF287D621D6356180005C78A /* YMSocket.h */,
+				EF287D631D6356180005C78A /* YMSocket.m */,
 				EF287D321D6343A90005C78A /* ViewController.h */,
 				EF287D331D6343A90005C78A /* ViewController.m */,
 				EF287D351D6343A90005C78A /* Main.storyboard */,
@@ -147,9 +194,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EF287D561D6343A90005C78A /* Build configuration list for PBXNativeTarget "YMChat" */;
 			buildPhases = (
+				B716FF772A088552D250A78D /* [CP] Check Pods Manifest.lock */,
 				EF287D251D6343A90005C78A /* Sources */,
 				EF287D261D6343A90005C78A /* Frameworks */,
 				EF287D271D6343A90005C78A /* Resources */,
+				BC722CFBA80C777BD3458A6D /* [CP] Embed Pods Frameworks */,
+				5DDB96B2F57286A6D59DF1F5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -247,6 +297,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF287D3C1D6343A90005C78A /* LaunchScreen.storyboard in Resources */,
+				EF358A1C1D68174400F39681 /* YMChatTableViewCell.xib in Resources */,
 				EF287D391D6343A90005C78A /* Assets.xcassets in Resources */,
 				EF287D371D6343A90005C78A /* Main.storyboard in Resources */,
 			);
@@ -268,14 +319,66 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5DDB96B2F57286A6D59DF1F5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YMChat/Pods-YMChat-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B716FF772A088552D250A78D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BC722CFBA80C777BD3458A6D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-YMChat/Pods-YMChat-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		EF287D251D6343A90005C78A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF358A1F1D68252200F39681 /* UserCellModel.m in Sources */,
+				EF287D641D6356180005C78A /* YMSocket.m in Sources */,
+				EF358A1B1D68174400F39681 /* YMChatTableViewCell.m in Sources */,
 				EF287D341D6343A90005C78A /* ViewController.m in Sources */,
 				EF287D311D6343A90005C78A /* AppDelegate.m in Sources */,
 				EF287D2E1D6343A90005C78A /* main.m in Sources */,
+				EF0F5A481D64B0570085CA53 /* ChatFriendModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -416,6 +519,7 @@
 		};
 		EF287D571D6343A90005C78A /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0A2B7DE7917CECC8F2E11DE9 /* Pods-YMChat.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YMChat/Info.plist;
@@ -427,6 +531,7 @@
 		};
 		EF287D581D6343A90005C78A /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D9859760978B090735880485 /* Pods-YMChat.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = YMChat/Info.plist;
@@ -501,6 +606,7 @@
 				EF287D581D6343A90005C78A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF287D591D6343A90005C78A /* Build configuration list for PBXNativeTarget "YMChatTests" */ = {
 			isa = XCConfigurationList;
@@ -509,6 +615,7 @@
 				EF287D5B1D6343A90005C78A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EF287D5C1D6343A90005C78A /* Build configuration list for PBXNativeTarget "YMChatUITests" */ = {
 			isa = XCConfigurationList;
@@ -517,6 +624,7 @@
 				EF287D5E1D6343A90005C78A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

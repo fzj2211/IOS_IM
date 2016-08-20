@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#define FULL_FRAME self.view.frame
 
 @interface ViewController : UIViewController
 

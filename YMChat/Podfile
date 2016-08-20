@@ -1,0 +1,5 @@
+target :YMChat do
+
+  pod 'SCLAlertView-Objective-C'
+
+end
