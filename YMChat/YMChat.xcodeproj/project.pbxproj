@@ -22,6 +22,9 @@
 		EF358A1C1D68174400F39681 /* YMChatTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF358A1A1D68174400F39681 /* YMChatTableViewCell.xib */; };
 		EF358A1F1D68252200F39681 /* UserCellModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EF358A1E1D68252200F39681 /* UserCellModel.m */; };
 		EF39AB341D6A8FBC009AED29 /* ChatRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EF39AB331D6A8FBC009AED29 /* ChatRoomViewController.m */; };
+		EF39AB381D6A9C91009AED29 /* ChatRoomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EF39AB361D6A9C91009AED29 /* ChatRoomTableViewCell.m */; };
+		EF39AB391D6A9C91009AED29 /* ChatRoomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EF39AB371D6A9C91009AED29 /* ChatRoomTableViewCell.xib */; };
+		EF3BB2D91D6C30B50089C581 /* YMManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EF3BB2D81D6C30B50089C581 /* YMManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,11 @@
 		EF358A1E1D68252200F39681 /* UserCellModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCellModel.m; sourceTree = "<group>"; };
 		EF39AB321D6A8FBC009AED29 /* ChatRoomViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRoomViewController.h; sourceTree = "<group>"; };
 		EF39AB331D6A8FBC009AED29 /* ChatRoomViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRoomViewController.m; sourceTree = "<group>"; };
+		EF39AB351D6A9C91009AED29 /* ChatRoomTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatRoomTableViewCell.h; sourceTree = "<group>"; };
+		EF39AB361D6A9C91009AED29 /* ChatRoomTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatRoomTableViewCell.m; sourceTree = "<group>"; };
+		EF39AB371D6A9C91009AED29 /* ChatRoomTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatRoomTableViewCell.xib; sourceTree = "<group>"; };
+		EF3BB2D71D6C30B50089C581 /* YMManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YMManager.h; sourceTree = "<group>"; };
+		EF3BB2D81D6C30B50089C581 /* YMManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YMManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,10 +161,15 @@
 				EF358A1A1D68174400F39681 /* YMChatTableViewCell.xib */,
 				EF287D621D6356180005C78A /* YMSocket.h */,
 				EF287D631D6356180005C78A /* YMSocket.m */,
+				EF3BB2D71D6C30B50089C581 /* YMManager.h */,
+				EF3BB2D81D6C30B50089C581 /* YMManager.m */,
 				EF287D321D6343A90005C78A /* ViewController.h */,
 				EF287D331D6343A90005C78A /* ViewController.m */,
 				EF39AB321D6A8FBC009AED29 /* ChatRoomViewController.h */,
 				EF39AB331D6A8FBC009AED29 /* ChatRoomViewController.m */,
+				EF39AB351D6A9C91009AED29 /* ChatRoomTableViewCell.h */,
+				EF39AB361D6A9C91009AED29 /* ChatRoomTableViewCell.m */,
+				EF39AB371D6A9C91009AED29 /* ChatRoomTableViewCell.xib */,
 				EF287D351D6343A90005C78A /* Main.storyboard */,
 				EF287D381D6343A90005C78A /* Assets.xcassets */,
 				EF287D3A1D6343A90005C78A /* LaunchScreen.storyboard */,
@@ -301,6 +314,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EF39AB391D6A9C91009AED29 /* ChatRoomTableViewCell.xib in Resources */,
 				EF287D3C1D6343A90005C78A /* LaunchScreen.storyboard in Resources */,
 				EF358A1C1D68174400F39681 /* YMChatTableViewCell.xib in Resources */,
 				EF287D391D6343A90005C78A /* Assets.xcassets in Resources */,
@@ -378,12 +392,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				EF358A1F1D68252200F39681 /* UserCellModel.m in Sources */,
+				EF3BB2D91D6C30B50089C581 /* YMManager.m in Sources */,
 				EF287D641D6356180005C78A /* YMSocket.m in Sources */,
 				EF358A1B1D68174400F39681 /* YMChatTableViewCell.m in Sources */,
 				EF287D341D6343A90005C78A /* ViewController.m in Sources */,
 				EF287D311D6343A90005C78A /* AppDelegate.m in Sources */,
 				EF287D2E1D6343A90005C78A /* main.m in Sources */,
 				EF0F5A481D64B0570085CA53 /* ChatFriendModel.m in Sources */,
+				EF39AB381D6A9C91009AED29 /* ChatRoomTableViewCell.m in Sources */,
 				EF39AB341D6A8FBC009AED29 /* ChatRoomViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

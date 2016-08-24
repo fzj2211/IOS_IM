@@ -10,10 +10,10 @@
 
 @implementation UserCellModel
 
-- (UserCellModel *)initWithUserName:(NSString *)userName andAddress:(NSString *)address{
+- (UserCellModel *)initWithMessage:(NSString *)message isSelf:(BOOL) isSelf {
     
-    self.userName = userName;
-    self.address = address;
+    self.isSelf = isSelf;
+    self.message = message;
     
     return self;
 }

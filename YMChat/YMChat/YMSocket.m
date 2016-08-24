@@ -11,7 +11,9 @@
 #import <netinet/in.h>
 #import <netinet/tcp.h>
 #import <arpa/inet.h>
-#include <ifaddrs.h>
+#import <ifaddrs.h>
+#import <netdb.h>
+#import "YMManager.h"
 
 @interface YMSocket () {
 @protected
@@ -47,8 +49,97 @@
     return self;
 }
 
+- (BOOL)connect {
+    // Construct server address information.
+    struct addrinfo hints, *serverinfo, *p;
+    
+    bzero(&hints, sizeof(hints));
+    hints.ai_family = AF_UNSPEC;
+    hints.ai_socktype = SOCK_STREAM;
+    
+    int error = getaddrinfo([_host UTF8String], [_port UTF8String], &hints, &serverinfo);
+    if (error) {
+        _lastError = NEW_ERROR(error, gai_strerror(error));
+        return NO;
+    }
+    
+    // Loop through the results and connect to the first we can.
+    @try {
+        for (p = serverinfo; p != NULL; p = p->ai_next) {
+            if ((_sockfd = socket(p->ai_family, p->ai_socktype, p->ai_protocol)) < 0) {
+                _lastError = NEW_ERROR(errno, strerror(errno));
+                return NO;
+            }
+            
+            // Instead of receiving a SIGPIPE signal, have write() return an error.
+            if (setsockopt(_sockfd, SOL_SOCKET, SO_NOSIGPIPE, &(int){1}, sizeof(int)) < 0) {
+                _lastError = NEW_ERROR(errno, strerror(errno));
+                return NO;
+            }
+            
+            // Disable Nagle's algorithm.
+            if (setsockopt(_sockfd, IPPROTO_TCP, TCP_NODELAY, &(int){1}, sizeof(int)) < 0) {
+                _lastError = NEW_ERROR(errno, strerror(errno));
+                return NO;
+            }
+            
+            // Increase receive buffer size.
+            if (setsockopt(_sockfd, SOL_SOCKET, SO_RCVBUF, &_size, sizeof(_size)) < 0) {
+                // Ignore this because some systems have small hard limits.
+            }
+            // Connect the socket (default connect timeout is 75 seconds).
+            if (connect(_sockfd, p->ai_addr, p->ai_addrlen) < 0) {
+                _lastError = NEW_ERROR(errno, strerror(errno));
+                continue;
+            }
+            
+            // Found a working address, so move on.
+            break;
+        }
+        if (p == NULL) {
+            _lastError = NEW_ERROR(1, "Could not contact server");
+            return NO;
+        }
+    }
+    @finally {
+        freeaddrinfo(serverinfo);
+    }
+    return YES;
+}
+
+- (BOOL)isConnected {
+    if (_sockfd == 0) {
+        return NO;
+    }
+    
+    struct sockaddr remoteAddr;
+    if (getpeername(_sockfd, &remoteAddr, &(socklen_t){sizeof(remoteAddr)}) < 0) {
+        _lastError = NEW_ERROR(errno, strerror(errno));
+        return NO;
+    }
+    return YES;
+}
+
+- (BOOL)close {
+    if (_sockfd > 0 && close(_sockfd) < 0) {
+        _lastError = NEW_ERROR(errno, strerror(errno));
+        return NO;
+    }
+    _sockfd = 0;
+    return YES;
+}
+
 - (long)sendBytes:(const void *)buf count:(long)count {
     long sent = send(_sockfd, buf, count, 0);
+    if (sent < 0) {
+        _lastError = NEW_ERROR(errno, strerror(errno));
+    }
+    return sent;
+}
+
+- (long)sendBytes:(const void *)buf count:(long)count bySocket:(int)socket{
+    long sent = send(socket, buf, count, 0);
+    NSLog(@"dangqiansocket:%d",socket);
     if (sent < 0) {
         _lastError = NEW_ERROR(errno, strerror(errno));
     }
@@ -143,6 +234,13 @@
     return _segmentSize;
 }
 
+- (int)socketInfo {
+    if (_sockfd > 0) {
+        return _sockfd;
+    }
+    return NO;
+}
+
 - (BOOL)setSegmentSize:(int)bytes {
     if (_sockfd > 0 && setsockopt(_sockfd, IPPROTO_TCP, TCP_MAXSEG, &bytes, sizeof(bytes)) < 0) {
         _lastError = NEW_ERROR(errno, strerror(errno));
@@ -152,9 +250,11 @@
     return YES;
 }
 
-#pragma mark 最早的方法版本
 
-- (BOOL)sendTCPConnectTo:(NSString *)address withMessage:(NSString *)message{
+
+#pragma mark 最早的版本
+
+- (int)sendTo:(NSString *)address withMessage:(NSString *)message{
     int err;
     int fd=socket(AF_INET, SOCK_STREAM, 0);
     BOOL success=(fd!=-1);
@@ -181,22 +281,22 @@
             success=(err==0);
             if (success) {
                 NSLog(@"connect success,local address:%s,port:%d",inet_ntoa(addr.sin_addr),ntohs(addr.sin_port));
-                send(fd, [message UTF8String], 1024, 0);
+                if ((send(fd, [message UTF8String], 1024, 0)!=-1)) {
+                    return fd;
+                }
+                return -1;
             }
         }
         else{
             NSLog(@"connect failed");
-            return NO;
+            return -1;
         }
-    } else{
-        NSLog(@"创建socket失败!");
-        return NO;
     }
-    
-    return YES;
+    NSLog(@"创建socket失败!");
+    return -1;
 }
 
-- (void)listenWithBlock:(connectBlock)block {
+- (void)listen {
     int err;
     int fd = socket(PF_INET, SOCK_STREAM, 0);
     BOOL success = (!(fd == -1));
@@ -211,13 +311,14 @@
         addr.sin_port=htons(YM_TCP_PORT); //端口
         addr.sin_addr.s_addr=INADDR_ANY; //设定地址为 所有地址 本地网卡：回环网卡，。。。 无线网卡
         err=bind(fd, (const struct sockaddr *)&addr, sizeof(addr));
+        perror("err");
         success=(err==0);
     }
     //   2
     //
     if (success) {
         NSLog(@"bind(绑定) success");
-        err=listen(fd, 1);//开始监听
+        err=listen(fd, 10);//开始监听
         success=(err==0);
     }
     //3
@@ -236,24 +337,17 @@
             success=(peerfd!=-1);
             if (success) {
                 NSLog(@"accept success,remote address:%s,port:%d",inet_ntoa(peeraddr.sin_addr),ntohs(peeraddr.sin_port));
-                char buf[1024];
-                ssize_t count;
-                size_t len=sizeof(buf);
-                NSString *str = @"";
-                count=recv(peerfd, buf, len, 0);
-                str = [NSString stringWithCString:buf encoding:NSUTF8StringEncoding];
-                block(str);
-                NSLog(@"%@",str);
+                [self dispatchReceiveOperationWithSocket:peerfd andAddress:[NSString stringWithUTF8String: inet_ntoa(peeraddr.sin_addr)]];
             }
         }
     }
 }
 
-- (BOOL)sendBroadcast {
+- (BOOL)sendBroadcastWithUserName:(NSString *)userName {
     int s;                                     /*套接字文件描述符*/
     struct sockaddr_in to;                     /*接收方的地址信息*/
+    char *buf = (char *)[userName UTF8String];
     ssize_t n;                                 /*发送到的数据长度*/
-    char buf[10] = "Hello";
     s = socket(AF_INET, SOCK_DGRAM, 0); /*初始化一个IPv4族的数据报套接字*/
     if (s == -1) {                             /*检查是否正常初始化socket*/
         perror("socket");
@@ -273,13 +367,12 @@
         return NO;
     }
     
-    n = sendto(s, buf, sizeof(buf), 0, (struct sockaddr*)&to, sizeof(to));
+    n = sendto(s, buf, strlen(buf), 0, (struct sockaddr*)&to, sizeof(to));
     if(n == -1){                       /*发送数据出错*/
         perror("sendto");
         return NO;
     }
     NSLog(@"发送搜寻组播成功!");
-    close(s);
     return YES;
 }
 
@@ -288,7 +381,7 @@
     int addrlen, sock;
     ssize_t cnt;
     struct ip_mreq mreq;
-    char message[1024];
+    char userName[100];
     
     /* set up socket */
     sock = socket(AF_INET, SOCK_DGRAM, 0);
@@ -315,21 +408,22 @@
         exit(1);
     }
     while (1) {
-        cnt = recvfrom(sock, message, sizeof(message), 0, (struct sockaddr *) &addr, (socklen_t *)&addrlen);
+        bzero((char *)userName, sizeof(userName));
+        cnt = recvfrom(sock, userName, sizeof(userName), 0, (struct sockaddr *) &addr, (socklen_t *)&addrlen);
         if (cnt < 0) {
             perror("recvfrom");
             exit(1);
         } else if (cnt == 0) {
             break;
         }
-        NSMutableDictionary *result = [NSMutableDictionary dictionary];
-        [result setObject:[NSString stringWithCString:message encoding:NSUTF8StringEncoding] forKey:@"message"];
-        [result setObject:[NSString stringWithCString:inet_ntoa(addr.sin_addr) encoding:NSUTF8StringEncoding] forKey:@"address"];
         if ([[self getIPAddress] compare:[NSString stringWithCString:inet_ntoa(addr.sin_addr) encoding:NSUTF8StringEncoding]] == NSOrderedSame) {
             continue;
         }
+        NSMutableDictionary *result = [NSMutableDictionary dictionary];
+        [result setObject:[NSString stringWithCString:userName encoding:NSUTF8StringEncoding] forKey:@"userName"];
+        [result setObject:[NSString stringWithCString:inet_ntoa(addr.sin_addr) encoding:NSUTF8StringEncoding] forKey:@"address"];
         block(result);
-        printf("%s: message = \"%s\"\n", inet_ntoa(addr.sin_addr), message);
+        printf("%s: message = \"%s\"\n", inet_ntoa(addr.sin_addr), userName);
     }
 }
 //获取本机IP
@@ -358,7 +452,32 @@
     freeifaddrs(interfaces);
     return address;
 }
-//NSString转char
+
+- (void)dispatchReceiveOperationWithSocket:(int)peerfd andAddress:(NSString *)address{
+    //异步执行接收数据
+    dispatch_queue_t currentQueue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_async(currentQueue, ^{
+        while (true) {
+            char buf[1024];
+            ssize_t count;
+            size_t len=sizeof(buf);
+            count=recv(peerfd, buf, len, 0);
+            NSString *messageWithType = [NSString stringWithUTF8String:buf];
+            int type = [[messageWithType substringWithRange:NSMakeRange(0, 1)] intValue];
+            if (1 == type) {
+                [[YMManager sharedInstance] registerVCWithSocketId:peerfd];
+                NSMutableDictionary *result = [NSMutableDictionary dictionary];
+                [result setObject:[messageWithType substringFromIndex:1] forKey:@"message"];
+                [result setObject:address forKey:@"address"];
+                [result setObject:[NSString stringWithFormat:@"%d", peerfd] forKey:@"socket"];
+                NSLog(@"接收得到的socket:%d", peerfd);
+                [[YMManager sharedInstance] refreshDataWithAddress:result];
+            }else {
+                [[YMManager sharedInstance] refreshData:[NSString stringWithUTF8String:buf]];
+            }
+        }
+    });
+}
 
 @end
 

@@ -13,7 +13,7 @@
 #define NEW_ERROR(num, str) [[NSError alloc] initWithDomain:@"FastSocketErrorDomain" code:(num) userInfo:[NSDictionary dictionaryWithObject:[NSString stringWithFormat:@"%s", (str)] forKey:NSLocalizedDescriptionKey]]
 
 typedef void (^listenBlock)(NSDictionary *result);
-typedef void (^connectBlock)(NSString *message);
+typedef void (^connectBlock)(NSDictionary *result);
 
 @interface YMSocket : NSObject
 
@@ -33,6 +33,8 @@ typedef void (^connectBlock)(NSString *message);
 
 - (long)sendBytes:(const void *)buf count:(long)count;
 
+- (long)sendBytes:(const void *)buf count:(long)count bySocket:(int)socket;
+
 - (long)receiveBytes:(void *)buf limit:(long)limit;
 
 - (long)receiveBytes:(void *)buf count:(long)count;
@@ -47,14 +49,18 @@ typedef void (^connectBlock)(NSString *message);
 
 - (BOOL)setSegmentSize:(int)bytes;
 
+- (int)socketInfo;
 
 
-- (BOOL)sendTCPConnectTo:(NSString *)addr withMessage:(NSString *)message;
 
-- (void)listenWithBlock:(connectBlock)block;
+- (int)sendTo:(NSString *)addr withMessage:(NSString *)message;
 
-- (BOOL)sendBroadcast;
+- (void)listen;
+
+- (BOOL)sendBroadcastWithUserName:(NSString *)userName;
 
 - (void)listenBroadcastWithBlock:(listenBlock)block;
+
+- (void)dispatchReceiveOperationWithSocket:(int)peerfd andAddress:(NSString *)address;
 
 @end

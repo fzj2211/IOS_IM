@@ -10,4 +10,11 @@
 
 @implementation ChatFriendModel
 
+- (ChatFriendModel *)initWithUserName:(NSString *)userName address:(NSString *)address socketInfo:(int)peerfd{
+    self.userName = userName;
+    self.address = address;
+    self.peerfd = peerfd;
+    return self;
+}
+
 @end

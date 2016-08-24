@@ -10,8 +10,12 @@
 
 @interface ChatFriendModel : NSObject
 
-@property(nonatomic, strong) NSString *message;
+@property(nonatomic, strong) NSString *userName;
 
 @property(nonatomic, strong) NSString *address;
+
+@property(nonatomic, assign) int peerfd;
+
+- (ChatFriendModel *)initWithUserName:(NSString *)userName address:(NSString *)address socketInfo:(int)peerfd;
 
 @end

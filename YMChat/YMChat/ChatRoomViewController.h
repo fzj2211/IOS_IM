@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "YMSocket.h"
+#define FULL_FRAME self.view.frame
 
 @interface ChatRoomViewController : UIViewController
+
+@property (nonatomic, assign) int socket;
 
 @end
