@@ -55,17 +55,6 @@
     return [_vcWithSocketId objectForKey:socketIdS];
 }
 
-//- (void)flushNewData:(NSString *)data bySocketId:(int)socketId
-//{
-//    NSString *socketIdS = [NSString stringWithFormat:@"%d", socketId];
-//    ChatRoomViewController *vc = [_vcWithSocketId objectForKey:socketIdS];
-//    if (!vc) {
-//        assert(NO);
-//    }
-//    
-//    [vc addData:data];
-//}
-
 - (void)refreshData:(NSString *)string {
     if ([self.delegate respondsToSelector:@selector(refreshData:)]) {
         [self.delegate performSelector:@selector(refreshData:)withObject:string];

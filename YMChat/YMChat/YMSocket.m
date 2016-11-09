@@ -309,19 +309,16 @@
         addr.sin_len=sizeof(addr);//socket字节长度
         addr.sin_family=PF_INET;  //协议族
         addr.sin_port=htons(YM_TCP_PORT); //端口
-        addr.sin_addr.s_addr=INADDR_ANY; //设定地址为 所有地址 本地网卡：回环网卡，。。。 无线网卡
+        addr.sin_addr.s_addr=INADDR_ANY;
         err=bind(fd, (const struct sockaddr *)&addr, sizeof(addr));
         perror("err");
         success=(err==0);
     }
-    //   2
-    //
     if (success) {
         NSLog(@"bind(绑定) success");
         err=listen(fd, 10);//开始监听
         success=(err==0);
     }
-    //3
     // 每个客户端连接服务器后，服务器都会分配一个端口给客户端，然后服务器继续在设定的端口上继续等待。
     if (success) {
         NSLog(@"listen success");
@@ -358,15 +355,6 @@
     to.sin_port = htons(YM_BROADCAST_PORT);                 /*本地端口*/
     to.sin_addr.s_addr = inet_addr(YM_GROUP);
     
-    int opt = 1;
-    int nb = 0;
-    nb = setsockopt(s, SOL_SOCKET, SO_BROADCAST, (char *)&opt, sizeof(opt));
-    if(nb == -1)
-    {
-        NSLog(@"set socket error...");
-        return NO;
-    }
-    
     n = sendto(s, buf, strlen(buf), 0, (struct sockaddr*)&to, sizeof(to));
     if(n == -1){                       /*发送数据出错*/
         perror("sendto");
@@ -383,7 +371,7 @@
     struct ip_mreq mreq;
     char userName[100];
     
-    /* set up socket */
+    //创建socket
     sock = socket(AF_INET, SOCK_DGRAM, 0);
     if (sock < 0) {
         perror("socket");
@@ -395,11 +383,12 @@
     addr.sin_port = htons(YM_BROADCAST_PORT);
     addrlen = sizeof(addr);
     
-    /* receive */
+    //绑定端口
     if (bind(sock, (struct sockaddr *) &addr, sizeof(addr)) < 0) {
         perror("bind");
         exit(1);
     }
+    //将socket加入指定的组播组
     mreq.imr_multiaddr.s_addr = inet_addr(YM_GROUP);
     mreq.imr_interface.s_addr = htonl(INADDR_ANY);
     if (setsockopt(sock, IPPROTO_IP, IP_ADD_MEMBERSHIP,
