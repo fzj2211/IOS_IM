@@ -24,8 +24,8 @@
 
 + (NSString *)cellIdentifier;
 
-- (void)setSelfMessage:(NSString *)message;
+- (void)setSelfMessage:(NSString *)message time:(NSString *)time;
 
-- (void)setOtherMessage:(NSString *)message;
+- (void)setOtherMessage:(NSString *)message time:(NSString *)time;
 
 @end

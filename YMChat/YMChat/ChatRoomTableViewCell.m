@@ -42,12 +42,14 @@
     return NSStringFromClass([self class]);
 }
 
-- (void)setSelfMessage:(NSString *)message {
+- (void)setSelfMessage:(NSString *)message time:(NSString *)time{
     self.selfMessageLabel.text = message;
+    self.timeLabel.text = time;
 }
 
-- (void)setOtherMessage:(NSString *)message {
+- (void)setOtherMessage:(NSString *)message time:(NSString *)time{
     self.otherMessageLabel.text = message;
+    self.timeLabel.text = time;
 }
 
 @end

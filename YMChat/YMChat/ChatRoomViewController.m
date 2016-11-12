@@ -77,14 +77,14 @@
         YMSocket *ymsocket = [[YMSocket alloc]init];
         [ymsocket sendBytes:message count: 1024 bySocket:weakself.socket];
     });
-    UserCellModel *tempUserCellModel = [[UserCellModel alloc]initWithMessage:self.messageTextField.text isSelf:YES];
+    UserCellModel *tempUserCellModel = [[UserCellModel alloc]initWithMessage:self.messageTextField.text isSelf:YES time:[self timeNow]];
     [self.userCellModel addObject:tempUserCellModel];
     [self.chatTableView reloadData];
 }
 
 - (void)refreshTableView:(NSNotification *)notification {
     NSDictionary *result = [notification object];
-    UserCellModel *tempUserCellModel = [[UserCellModel alloc]initWithMessage:[result objectForKey:@"message"] isSelf:NO];
+    UserCellModel *tempUserCellModel = [[UserCellModel alloc]initWithMessage:[result objectForKey:@"message"] isSelf:NO time:[self timeNow]];
     [self.userCellModel addObject:tempUserCellModel];
     [self.chatTableView reloadData];
 }
@@ -169,22 +169,14 @@
         cell.selfMessageLabel.hidden = NO;
         cell.otherMessageBubbleView.hidden = YES;
         cell.otherMessageLabel.hidden = YES;
-        [cell setSelfMessage: self.userCellModel[indexPath.row].message];
+        [cell setSelfMessage: self.userCellModel[indexPath.row].message time:self.userCellModel[indexPath.row].timeString];
     }else {
         cell.selfMessageBubbleView.hidden = YES;
         cell.selfMessageLabel.hidden = YES;
         cell.otherMessageBubbleView.hidden = NO;
         cell.otherMessageLabel.hidden = NO;
-        [cell setOtherMessage: self.userCellModel[indexPath.row].message];
+        [cell setOtherMessage: self.userCellModel[indexPath.row].message time:self.userCellModel[indexPath.row].timeString];
     }
-    NSDateFormatter  *formatter = [[NSDateFormatter alloc] init];
-    [formatter setDateFormat:@"yy-MM-dd HH:mm"];
-    NSDate * date = [NSDate date];
-    NSTimeInterval sec = [date timeIntervalSinceNow];
-    NSDate * currentDate = [[NSDate alloc] initWithTimeIntervalSinceNow:sec];
-    NSMutableString *timeString = [NSMutableString stringWithFormat:@"%@",[formatter stringFromDate:currentDate]];
-				
-    [cell.timeLabel setText:timeString];
     
     return cell;
 }
@@ -194,20 +186,20 @@
 - (void)refreshData:(NSString *)string {
     __weak typeof (self) weakself = self;
     dispatch_sync(dispatch_get_main_queue(), ^{
-        UserCellModel *tempUserCellModel = [[UserCellModel alloc]initWithMessage:string isSelf:NO];
+        UserCellModel *tempUserCellModel = [[UserCellModel alloc]initWithMessage:string isSelf:NO time:[self timeNow]];
         [weakself.userCellModel addObject:tempUserCellModel];
         [weakself.chatTableView reloadData];
     });
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (NSString *)timeNow {
+    NSDateFormatter  *formatter = [[NSDateFormatter alloc] init];
+    [formatter setDateFormat:@"yy-MM-dd HH:mm"];
+    NSDate * date = [NSDate date];
+    NSTimeInterval sec = [date timeIntervalSinceNow];
+    NSDate * currentDate = [[NSDate alloc] initWithTimeIntervalSinceNow:sec];
+    NSMutableString *timeString = [NSMutableString stringWithFormat:@"%@",[formatter stringFromDate:currentDate]];
+    return timeString;
 }
-*/
 
 @end

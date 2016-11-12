@@ -10,10 +10,11 @@
 
 @implementation UserCellModel
 
-- (UserCellModel *)initWithMessage:(NSString *)message isSelf:(BOOL) isSelf {
+- (UserCellModel *)initWithMessage:(NSString *)message isSelf:(BOOL) isSelf time:(NSString *)time {
     
     self.isSelf = isSelf;
     self.message = message;
+    self.timeString = time;
     
     return self;
 }

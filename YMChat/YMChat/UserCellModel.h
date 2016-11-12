@@ -10,10 +10,12 @@
 
 @interface UserCellModel : NSObject
 
-@property(nonatomic, assign) BOOL isSelf;
+@property (nonatomic, assign) BOOL isSelf;
 
-@property(nonatomic, strong) NSString *message;
+@property (nonatomic, strong) NSString *message;
 
-- (UserCellModel *)initWithMessage:(NSString *)message isSelf:(BOOL) isSelf;
+@property (nonatomic, strong) NSString *timeString;
+
+- (UserCellModel *)initWithMessage:(NSString *)message isSelf:(BOOL) isSelf time:(NSString *)time;
 
 @end

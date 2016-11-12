@@ -33,8 +33,6 @@
 
 - (ChatRoomViewController *)getRootVCById:(int)socketId;
 
-- (void)flushNewData:(NSString *)data bySocketId:(int)socketId;
-
 - (void)refreshData:(NSString *)string;
 
 - (void)refreshDataWithAddress:(NSDictionary *)result;
